@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPath - Your Learning Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <header>
+        <div class="container">
+            <h1 class="logo">EduPath</h1>
+            <nav>
+                <button class="nav-btn active" data-section="chatbot">Chat Bot</button>
+                <button class="nav-btn" data-section="roadmap">Roadmap Generator</button>
+                <button class="nav-btn" data-section="progress">Progress Tracker</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Chat Bot Section -->
+        <section id="chatbot" class="section active">
+            <div class="section-header">
+                <h2>AI Learning Assistant</h2>
+                <p>Ask questions about your studies and get helpful responses</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>Hello! I'm your learning assistant. Ask me anything about education, study tips, or subjects you're learning!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" placeholder="Ask a question..." maxlength="200">
+                    <button id="sendBtn">Send</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Generator Section -->
+        <section id="roadmap" class="section">
+            <div class="section-header">
+                <h2>Learning Roadmap Generator</h2>
+                <p>Create a personalized learning path for your chosen subject</p>
+            </div>
+            
+            <div class="roadmap-form">
+                <div class="form-group">
+                    <label for="subjectSelect">Choose Subject:</label>
+                    <select id="subjectSelect">
+                        <option value="">Select a subject</option>
+                        <option value="javascript">JavaScript Programming</option>
+                        <option value="python">Python Programming</option>
+                        <option value="math">Mathematics</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                        <option value="literature">Literature</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="levelSelect">Current Level:</label>
+                    <select id="levelSelect">
+                        <option value="">Select your level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                
+                <button id="generateRoadmap">Generate Roadmap</button>
+            </div>
+            
+            <div class="roadmap-display" id="roadmapDisplay">
+                <!-- Generated roadmap will appear here -->
+            </div>
+        </section>
+
+        <!-- Progress Tracker Section -->
+        <section id="progress" class="section">
+            <div class="section-header">
+                <h2>Progress Tracker</h2>
+                <p>Track your learning milestones and achievements</p>
+            </div>
+            
+            <div class="progress-controls">
+                <div class="add-task-form">
+                    <input type="text" id="taskInput" placeholder="Add a new learning goal..." maxlength="100">
+                    <button id="addTaskBtn">Add Goal</button>
+                </div>
+                
+                <div class="progress-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="totalTasks">0</span>
+                        <span class="stat-label">Total Goals</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="completedTasks">0</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="progressPercentage">0%</span>
+                        <span class="stat-label">Progress</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tasks-container" id="tasksContainer">
+                <!-- Tasks will be added here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

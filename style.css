@@ -50,9 +50,8 @@ header .container {
 }
 
 nav {
-  
     display: flex;
-    gap: 0.7 rem;
+    gap: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.5rem;
     border-radius: 15px;
@@ -619,34 +618,6 @@ main {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .hero-visual {
-        height: 300px;
-    }
-
-    .hero-circle {
-        width: 200px;
-        height: 200px;
-    }
-
-    .stats-section {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
     .container {
         padding: 0 15px;
     }
